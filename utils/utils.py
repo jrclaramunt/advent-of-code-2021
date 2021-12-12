@@ -22,3 +22,21 @@ class Coordinate:
 
     def __hash__(self):
         return hash(self.__members())
+
+
+class Stack:
+
+    def __init__(self):
+        self.stack = []
+
+    def push(self, elem):
+        self.stack.append(elem)
+
+    def pop(self):
+        return self.stack.pop(len(self.stack) - 1)
+
+    def head(self):
+        return self.stack[len(self.stack) - 1]
+
+    def is_empty(self):
+        return len(self.stack) == 0
